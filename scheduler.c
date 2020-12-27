@@ -8,7 +8,6 @@
 2. You should longjmp(SCHEDULER,1) once you're done
 */
 void sighandler(int signo){
-    printf("hand");
     if(signo==SIGALRM){
         sigprocmask(SIG_SETMASK, &base_mask, NULL);
         printf("ALRM signal!\n");

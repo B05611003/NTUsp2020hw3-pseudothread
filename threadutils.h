@@ -80,7 +80,7 @@ Call this while a thread is terminated
 /*
 Decided whether to "context switch" based on the switchmode argument passed in main.c
 */
-#define ThreadYield()                                   \
+#define ThreadYield()\
 {                                                       \
 	if(switchmode==1){										\
 		if (sigpending(&waiting_mask) < 0)\
